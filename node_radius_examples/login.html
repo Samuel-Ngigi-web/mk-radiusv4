@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NextT Hotspot</title>
+    <style>
+      body {
+        background-color: #000207;
+      }
+      .smd-navbar {
+        display: none;
+      }
+      .section-main {
+        display: flex;
+        justify-content: space-between;
+      }
+      .Nav-bar {
+        background-color: #007772;
+        display: flex;
+        flex-direction: column;
+        gap: 2cm;
+        width: 15vw;
+        height: 100vh;
+        padding-left: 16px;
+        padding-top: 32px;
+      }
+      .Nav-bar > a {
+        color: white;
+        text-decoration: none;
+      }
+      .ln-form {
+        border: 1px solid rgb(12, 11, 11);
+        border-radius: 16px;
+        border-radius: 2px;
+        background-color: #6e6e6e;
+      }
+      .form-fields {
+        display: flex;
+        flex-direction: column;
+        height: 30vh;
+        gap: 16px;
+        padding: 32px;
+      }
+      .info-pane {
+        flex-grow: 1;
+        padding: 48px 324px;
+      }
+      .input-field {
+        height: 48px;
+        border-radius: 5px;
+      }
+      .submit-btn {
+        background-color: #007772;
+        color: white;
+        margin-left: 96px;
+        margin-bottom: 96px;
+        padding: 8px 96px;
+        border-radius: 5px;
+      }
+      .submit-btn:hover {
+        cursor: pointer;
+        padding: 12px 112px;
+      }
+
+      @media (max-width: 600px) {
+        .Nav-bar {
+          display: none;
+        }
+        .info-pane {
+          flex-grow: 1;
+          padding: 48px 112px;
+        }
+        .submit-btn {
+          background-color: #007772;
+          color: white;
+          border-radius: 5px;
+        }
+        .submit-btn:hover {
+          cursor: pointer;
+          padding: 12px 48px;
+        }
+        .smd-navbar {
+          display: flex;
+          height: 40px;
+        }
+        .smd-navbar:hover {
+          cursor: pointer;
+          .Nav-bar {
+            display: flex;
+            width: 12vw;
+            height: 80vh;
+            padding-left: 16px;
+            padding-top: 32px;
+            margin-bottom: 24px;
+          }
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="section-main">
+      <button class="smd-navbar"><img src="" alt="logo" /></button>
+      <div class="Nav-bar">
+        <a href="#">About</a>
+        <a href="./subscription.html">Subsciptions</a>
+        <a href="#">How to connect</a>
+        <a href="/loginAdmin">Admin</a>
+      </div>
+      <div class="info-pane">
+        <div>
+          <h1 style="color: #007777">Connect to NextT Hotspot WI-FI</h1>
+          <form action="/login" method="post" class="ln-form">
+            <div class="form-fields">
+              <small style="display: flex; justify-content: center"
+                ><b>User name</b></small
+              >
+              <input
+                type="text"
+                name="username"
+                class="input-field"
+                id="username"
+                required
+              />
+              <small style="display: flex; justify-content: center"
+                ><b>Password</b></small
+              >
+              <input
+                type="text"
+                name="secret"
+                class="input-field"
+                id="password"
+                required
+              />
+            </div>
+            <b style="display: flex; justify-content: center"
+              ><button type="submit" class="submit-btn" id="submit">
+                <b>Connect</b>
+              </button></b
+            >
+          </form>
+        </div>
+      </div>
+    </section>
+    <script src="./auth_client.js"></script>
+    <!-- <script src="../app.js" type="module" defer></script> -->
+
+    <!-- 
+    <script type="text/javascript">
+      const users = [
+        { name: "sam", password: 1234 },
+        { name: "joyce", password: 1234 },
+        { name: "ruth", password: 1234 },
+      ];
+      function authenticate() {
+        const username = String(document.getElementById("username").value);
+        const password = Number(document.getElementById("password").value);
+        const valid = users.find((element) => {
+          element.name === username && element.password == password;
+        });
+        //alert(valid)
+
+       // if (valid !== undefined) {
+          alert("Uh! uh! That's an invalid user " + username + " " + password);
+          //console.log(username +" "+ password)
+          //return "access_accept"
+          //window.close()
+
+
+      //  } else {
+     //     alert("That is a valid user");
+    //    }
+    //  }
+
+       //const btn = document.getElementById("submit");
+      //btn.addEventListener("click", authenticate);
+
+      //alert(returnedValue)
+    </script> -->
+  </body>
+</html>
